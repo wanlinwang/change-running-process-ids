@@ -1,4 +1,4 @@
-obj-m += chown-pid.o  
+obj-m += change-process-ids.o  
 
 PWD := ${PWD}
 

@@ -152,9 +152,9 @@ int init_module(void) {
 				n += do_single();
 			}
 		}
-		pr_info("chown-pid: in total, %d/%d processes belonging to UID %d are set successfully\n", n, N, arg_uid);
+		pr_info("change-process-ids: in total, %d/%d processes belonging to UID %d are set successfully\n", n, N, arg_uid);
 	}else{
-		pr_info("Error: Usage: insmod chown-pid.ko arg_pid/arg_uid=## arg_gid=## (arg_act='add/remove/list/query/set_uid/set_gid') && rmmod chown-pid\n");
+		pr_info("Error: Usage: insmod change-process-ids.ko arg_pid/arg_uid=## arg_gid=## (arg_act='add/remove/list/query/set_uid/set_gid') && rmmod change-process-ids\n");
 	}
 
     return -EEXIST;	// always return error to avoid running `rmmod` every time
